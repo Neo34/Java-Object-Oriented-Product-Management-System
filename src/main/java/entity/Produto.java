@@ -2,17 +2,14 @@ package entity;
 
 /**
  * Abstract base class that represents a generic product in the system.
- *
  * This class defines the common attributes shared by all product types,
- * such as name, price, and quantity.
- *
- * It does NOT define freight behavior, since not every product
- * necessarily has shipping costs (e.g., digital products).
- *
+ * such as name,price and quantity.
+ * It does NOT define freight behavior,since not every product
+ * necessarily has shipping costs(e.g.,digital products).
  * Subclasses should extend this class to represent specific product types.
  */
-public abstract class Produto {
 
+public abstract class Produto {
     /**
      * Product name.
      */
@@ -21,6 +18,7 @@ public abstract class Produto {
     /**
      * Unit price of the product.
      */
+
     private double preco;
 
     /**
@@ -31,8 +29,8 @@ public abstract class Produto {
     /**
      * Constructs a product with required attributes.
      *
-     * @param nome the product name
-     * @param preco the unit price
+     * @param nome       the product name
+     * @param preco      the unit price
      * @param quantidade the quantity selected
      */
     public Produto(String nome, double preco, int quantidade) {
@@ -65,7 +63,6 @@ public abstract class Produto {
     /**
      * Calculates the subtotal of the product
      * (unit price multiplied by quantity).
-     *
      * This method represents shared behavior among all product types.
      *
      * @return subtotal value
