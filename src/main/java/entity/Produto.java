@@ -1,5 +1,7 @@
 package entity;
 
+import exception.InvalidProductException;
+
 /**
  * Abstract base class that represents a generic product in the system.
  * This class defines the common attributes shared by all product types,
@@ -34,6 +36,15 @@ public abstract class Produto {
      * @param quantidade the quantity selected
      */
     public Produto(String nome, double preco, int quantidade) {
+        if (nome == null || nome.isBlank()) {
+            throw new InvalidProductException("Product name cannot be empty.");
+        }
+        if (preco <= 0) {
+            throw new InvalidProductException("Price must be greater than zero.");
+        }
+        if (quantidade <= 0) {
+            throw new InvalidProductException("Quantity must be greater than zero.");
+        }
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
