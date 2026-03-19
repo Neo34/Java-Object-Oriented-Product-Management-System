@@ -1,3 +1,6 @@
+## Version
+Current version: v1.0.0
+
 ## 🏗 Project Structure
 # 📦 Order Management System - Java OOP
 
